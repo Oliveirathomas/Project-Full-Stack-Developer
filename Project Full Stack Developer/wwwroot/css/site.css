@@ -1,18 +1,79 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+li.nav-item {
+    border: 1px solid #797979;
+    margin: 15px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+    li.nav-item:hover {
+        transform: scale(1.2);
+        transition: 0.3s ease-out;
+        background-color: #92abff;
+    }
+
+a {
+    font-size: 13px;
+    font-family: 'Copperplate Gothic';
+    text-decoration: none;
+    color: #6bc4ff;
+}
+
+    a:hover {
+        color: black;
+        transform: scale(1.2);
+    }
+
+
+
+
+
+h4 {
+    font-family: 'Copperplate Gothic';
+}
+
+h1 {
+    margin-top: 20px;
+    font-family: 'Copperplate Gothic';
+}
+
+div.form-group {
+    font-family: 'Copperplate Gothic';
+    font-size: 14px
+}
+
+div.card {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    margin-left: 40px;
+}
+
+div#container {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-top: 40px;
+}
+
+div.contain {
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 10px;
 }
