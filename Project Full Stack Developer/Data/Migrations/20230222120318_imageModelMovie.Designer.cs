@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_Full_Stack_Developer.Data;
 
@@ -11,9 +12,10 @@ using Project_Full_Stack_Developer.Data;
 namespace Project_Full_Stack_Developer.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230222120318_imageModelMovie")]
+    partial class imageModelMovie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -355,9 +357,8 @@ namespace Project_Full_Stack_Developer.Data.Migrations
                     b.Property<int>("IdProdution")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("Image")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                    b.Property<byte>("Image")
+                        .HasColumnType("tinyint");
 
                     b.Property<int>("Oscars")
                         .HasColumnType("int");
@@ -366,10 +367,6 @@ namespace Project_Full_Stack_Developer.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("imgPath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

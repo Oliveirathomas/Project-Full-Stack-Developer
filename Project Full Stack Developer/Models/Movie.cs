@@ -32,5 +32,7 @@ namespace Project_Full_Stack_Developer.Models
         public Prodution Prodution { get; set; }
         [ValidateNever]
         public ICollection<Theater> Theaters { get; set; }
+        public byte [] Image { get; set; }
+        public string imgPath { get; set; }
     }
 }
