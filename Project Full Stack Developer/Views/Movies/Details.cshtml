@@ -8,54 +8,57 @@
 <div class="contain">
     <div>
         <h4>Details of Movie</h4>
-        @Html.Partial("MovieImage")
-        <hr />
+        
+        
         <dl class="row">
-            
-                <dt class = "col-sm-2">
+            <div class="col">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Title)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.Title)
                 </dd>
-                <dt class = "col-sm-2">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Description)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.Description)
                 </dd>
-                <dt class = "col-sm-2">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.ReleaseDate)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.ReleaseDate)
                 </dd>
-                <dt class = "col-sm-2">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Oscars)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.Oscars)
                 </dd>
-                <dt class = "col-sm-2">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Category)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.Category.Name)
                 </dd>
-                <dt class = "col-sm-2">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Director)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.Director.Name)
                 </dd>
-                <dt class = "col-sm-2">
+                <dt class="col-sm-2">
                     @Html.DisplayNameFor(model => model.Prodution)
                 </dt>
-                <dd class = "col-sm-10">
+                <dd class="col-sm-10">
                     @Html.DisplayFor(model => model.Prodution.Name)
                 </dd>
-           
-        </dl>
+            </div>
+            <div class="col-6">
+                <img src="@Model.imgPath" class="img-thumbnail " />
+            </div>
+    </div>
    
     </div>
     <div>

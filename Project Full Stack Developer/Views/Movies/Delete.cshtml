@@ -6,7 +6,7 @@
 <div class="contain">
     <div class="container">
         <h4>Delete Movie</h4>
-        <hr />
+        
             <dl class="row">
                 <div class="col">
                     <dt class = "col-sm-2">
@@ -52,11 +52,11 @@
                         @Html.DisplayFor(model => model.Prodution.Name)
                     </dd>
                 </div>
-                <div class="col"">
-                    @Html.Partial("MovieImage")
+                <div class="col-6">
+                    <img src="@Model.imgPath" class="img-thumbnail " />
                 </div>
             </div>
-         </dl>
+        
     
         <form asp-action="Delete">
             <input type="hidden" asp-for="Id" />
