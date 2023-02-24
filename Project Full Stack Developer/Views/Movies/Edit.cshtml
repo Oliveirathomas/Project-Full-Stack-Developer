@@ -6,7 +6,7 @@
 
 <div class="contain">
     <h4>Edit Movie</h4>
-    <hr />
+    
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Edit">
@@ -51,6 +51,9 @@
                     <input type="submit" value="Save" class="btn btn-primary" />
                 </div>
             </form>
+        </div>
+        <div class="col-6">
+            <img src="@Model.imgPath" class="img-thumbnail " />
         </div>
     </div>
 

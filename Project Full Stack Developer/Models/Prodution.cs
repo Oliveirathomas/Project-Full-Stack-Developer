@@ -10,7 +10,7 @@ namespace Project_Full_Stack_Developer.Models
         public string Name { get; set; }
         public string Adress { get; set; }
         public string Description { get; set; }
-        [Display(Name = "Date of creation")]
+        [Display(Name = "Year of foundation")]
         public int DateOfCreation { get; set; }
         [ValidateNever]
         public ICollection<Movie> Movies { get; set; }

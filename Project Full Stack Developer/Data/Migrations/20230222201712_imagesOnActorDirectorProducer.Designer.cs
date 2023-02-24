@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project_Full_Stack_Developer.Data;
 
@@ -11,9 +12,10 @@ using Project_Full_Stack_Developer.Data;
 namespace Project_Full_Stack_Developer.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230222201712_imagesOnActorDirectorProducer")]
+    partial class imagesOnActorDirectorProducer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -275,6 +277,10 @@ namespace Project_Full_Stack_Developer.Data.Migrations
                     b.Property<double>("Rating")
                         .HasColumnType("float");
 
+                    b.Property<string>("imgPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Actor");
@@ -328,6 +334,10 @@ namespace Project_Full_Stack_Developer.Data.Migrations
 
                     b.Property<double>("Rating")
                         .HasColumnType("float");
+
+                    b.Property<string>("imgPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -404,6 +414,10 @@ namespace Project_Full_Stack_Developer.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("imgPath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

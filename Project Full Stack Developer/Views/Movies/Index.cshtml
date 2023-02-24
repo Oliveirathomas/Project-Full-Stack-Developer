@@ -17,6 +17,9 @@
                     @Html.DisplayNameFor(model => model.Title)
                 </th>
                 <th>
+                    @Html.DisplayNameFor(model => model.imgPath)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
                 <th>
@@ -34,6 +37,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Prodution)
                 </th>
+                
                 <th></th>
             </tr>
         </thead>
@@ -43,6 +47,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
+              
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
@@ -53,14 +58,15 @@
                     @Html.DisplayFor(modelItem => item.Oscars)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Category.Id)
+                    @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Director.Id)
+                    @Html.DisplayFor(modelItem => item.Director.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Prodution.Id)
+                    @Html.DisplayFor(modelItem => item.Prodution.Name)
                 </td>
+
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

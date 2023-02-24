@@ -50,9 +50,9 @@ namespace Project_Full_Stack_Developer.Controllers
         // GET: Movies/Create
         public IActionResult Create()
         {
-            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Id");
-            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Id");
-            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Id");
+            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Name");
+            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Name");
+            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Name");
             return View();
         }
 
@@ -69,9 +69,9 @@ namespace Project_Full_Stack_Developer.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Id", movie.IdCategory);
-            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Id", movie.IdDirector);
-            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Id", movie.IdProdution);
+            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Name", movie.IdCategory);
+            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Name", movie.IdDirector);
+            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Name", movie.IdProdution);
             return View(movie);
         }
 
@@ -88,9 +88,9 @@ namespace Project_Full_Stack_Developer.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Id", movie.IdCategory);
-            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Id", movie.IdDirector);
-            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Id", movie.IdProdution);
+            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Name", movie.IdCategory);
+            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Name", movie.IdDirector);
+            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Name", movie.IdProdution);
             return View(movie);
         }
 
@@ -126,9 +126,9 @@ namespace Project_Full_Stack_Developer.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Id", movie.IdCategory);
-            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Id", movie.IdDirector);
-            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Id", movie.IdProdution);
+            ViewData["IdCategory"] = new SelectList(_context.Category, "Id", "Name", movie.IdCategory);
+            ViewData["IdDirector"] = new SelectList(_context.Director, "Id", "Name", movie.IdDirector);
+            ViewData["IdProdution"] = new SelectList(_context.Set<Prodution>(), "Id", "Name", movie.IdProdution);
             return View(movie);
         }
 
