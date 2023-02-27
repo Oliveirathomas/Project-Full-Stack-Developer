@@ -12,5 +12,6 @@ namespace Project_Full_Stack_Developer.Models
         public int Oscars { get; set; }
         [ValidateNever]
         public ICollection<Movie> Movies { get; set; }
+        public string imgPath { get; set; }
     }
 }
