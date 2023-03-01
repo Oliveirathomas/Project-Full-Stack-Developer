@@ -8,7 +8,7 @@
     <h4>Edit Movie</h4>
     
     <div class="row">
-        <div class="col-md-4">
+        <div class="col">
             <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
@@ -47,17 +47,15 @@
                     <select asp-for="IdProdution" class="form-control" asp-items="ViewBag.IdProdution"></select>
                     <span asp-validation-for="IdProdution" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
-                </div>
+                
             </form>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <img src="@Model.imgPath" class="img-thumbnail " />
         </div>
     </div>
-
-    <div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
         <a asp-action="Index">Back to List</a>
     </div>
 </div>

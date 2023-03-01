@@ -12,8 +12,8 @@ using Project_Full_Stack_Developer.Data;
 namespace Project_Full_Stack_Developer.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230227134157_addImages")]
-    partial class addImages
+    [Migration("20230301200407_addImgPath")]
+    partial class addImgPath
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -364,10 +364,6 @@ namespace Project_Full_Stack_Developer.Data.Migrations
 
                     b.Property<int>("IdProdution")
                         .HasColumnType("int");
-
-                    b.Property<byte[]>("Image")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<int>("Oscars")
                         .HasColumnType("int");

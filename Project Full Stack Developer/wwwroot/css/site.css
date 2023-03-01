@@ -18,16 +18,15 @@ body {
 }
 
 li.nav-item {
-    border: 1px solid #797979;
     margin: 15px;
     border-radius: 10px;
     margin-bottom: 70px;
 }
 
     li.nav-item:hover {
-        transform: scale(1.2);
-        transition: 0.3s ease-out;
-        background-color: #92abff;
+        transform: scale(1.2);translateY(-10px);
+        transition: 0.5s ease-out;
+        background-color: #a9a7a7;
     }
 
 a {

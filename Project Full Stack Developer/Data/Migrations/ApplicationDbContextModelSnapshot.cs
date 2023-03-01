@@ -363,10 +363,6 @@ namespace Project_Full_Stack_Developer.Data.Migrations
                     b.Property<int>("IdProdution")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("Image")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
                     b.Property<int>("Oscars")
                         .HasColumnType("int");
 
